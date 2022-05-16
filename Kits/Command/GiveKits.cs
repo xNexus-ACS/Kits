@@ -27,6 +27,12 @@ namespace Kits.Command
                 return false;
             }
 
+            if (p.IsScp)
+            {
+                response = "You cant execute the command (You are a SCP)";
+                return false;
+            }
+
             if (!MainClass.singleton.OneTimePerRound)
             {
                 response = "You used the kit, you cant use it again this round";
@@ -66,6 +72,11 @@ namespace Kits.Command
             if (!Round.IsStarted)
             {
                 response = "You cant execute the command (The round is not started)";
+                return false;
+            }
+            if (p.IsScp)
+            {
+                response = "You cant execute the command (You are a SCP)";
                 return false;
             }
 
@@ -110,6 +121,11 @@ namespace Kits.Command
                 response = "You cant execute the command (The round is not started)";
                 return false;
             }
+            if (p.IsScp)
+            {
+                response = "You cant execute the command (You are a SCP)";
+                return false;
+            }
 
             if (!MainClass.singleton.OneTimePerRound)
             {
@@ -149,6 +165,11 @@ namespace Kits.Command
             if (!Round.IsStarted)
             {
                 response = "You cant execute the command (The round is not started)";
+                return false;
+            }
+            if (p.IsScp)
+            {
+                response = "You cant execute the command (You are a SCP)";
                 return false;
             }
 
